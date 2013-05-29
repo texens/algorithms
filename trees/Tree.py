@@ -10,7 +10,8 @@ class Tree:
 
     def search_recursive(self, root, key):
         if root.value == key:
-            return True
+            print 'Key found'
+            return root
         elif root.value > key:
             if root.left != None:
                 return self.search_recursive(root.left, key)
@@ -35,6 +36,7 @@ class Tree:
                 else:
                     return False
 
+        print 'Key found'
         return True
 
     def generate_test_tree(self):
